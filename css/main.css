@@ -1,0 +1,714 @@
+@font-face {
+    font-family: 'Cafe24SsurroundAir';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24SsurroundAir.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'BinggraeMelona';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/BinggraeMelona.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+* {margin: 0; padding: 0;}
+li { list-style: none;}
+a {display: block; text-decoration: none; color: #333;}
+img {width: 100%;}
+html,body {overflow-x: hidden;}  /*가로 스크롤 막대 숨김*/
+div, header, section, footer {
+    width: 100%;
+    float: left;
+    box-sizing: border-box;
+}
+.wrap {width: 100%;}
+header {
+    position: fixed;
+    top: 0; left: 0;
+    z-index: 100;
+    height: 90px;
+    background-color: transparent;
+    padding: 4vw;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    transition: all 0.5s;
+}
+header .logo {
+    width:18vw;
+    height: 15vw;
+    background-image: url(../img/whitelogo.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-indent: -9999px;   /*들여쓰기*/
+    margin-top: -2vw;
+}
+header .menu_btn {
+    width:5vw;
+    height: 5vw;
+    background-image: url(../img/whitemenu.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-indent: -9999px;   /*들여쓰기*/
+    margin: 1vw 0;
+}
+header.active {
+    background-color: #fff;
+}
+header.active .logo {
+    background-image: url(../img/colorlogo.png);
+}
+header.active .menu_btn {
+    background-image: url(../img/colormenu.png);
+}
+header nav {
+    position: absolute;
+    background-color: #f8f7f7;
+    width: 90vw;
+    height: 100vh;
+    right: -100vw;
+    top: 0;
+}
+header nav .top_nav {
+    background-color: #fff1ca;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    padding: 4vw;
+}
+header nav .top_nav .top_logo {
+    width: 20vw;
+}
+header nav .top_nav .close_btn {
+    width: 4.7vw;
+    margin-top: 1vw;
+}
+header nav > ul {
+    background-color: #f8f7f7;
+    padding: 5vw 4vw;
+    width: 100%;
+    float: left;
+}
+header nav > ul > li {
+    border: 1px solid #dfdfdf;
+    width: 90%;
+    border-bottom: none;
+}
+header nav > ul > li:last-child {
+    border: 1px solid #dfdfdf;
+}
+header nav > ul > li > a {
+    padding: 5vw;
+    font-size: 5vw;
+    font-family:'Cafe24SsurroundAir' ;
+    font-weight: bold;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+
+}
+header nav > ul > li > a span {
+    display: block;
+    width: 4vw;
+    height: 4vw;
+    background-image: url(../img/sitemap-downarrow.png);
+    background-position: center;
+    background-position: no-repeat;
+    background-size: cover;
+}
+header nav > ul > li > a.active span {
+    background-image: url(../img/sitemapuparrow.png);
+}
+header nav .sub {
+    padding: 1vw 6vw 6vw;
+    display: none;
+}
+header nav .sub li a {
+    padding: 2.7vw;
+    font-family:'Cafe24SsurroundAir' ;
+    color: #40011c;
+    font-size: 4.2vw;
+}
+section.s1 .swiper {
+    height: 100vh;
+}
+section.s1 .swiper .swiper-slide {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    padding-top: 58vh;
+    padding-left: 7vw;
+    font-family: 'BinggraeMelona';
+}
+section.s1 .swiper .main1 {
+    background-image: url(../img/visual1.png);
+}
+section.s1 .swiper .main2 {
+    background-image: url(../img/visual2.png);
+}
+section.s1 .swiper .main3 {
+    background-image: url(../img/visual3.png);
+}
+section.s1 .swiper .swiper-slide h1 {
+    font-size: 5vw;
+    font-weight: bold;
+    margin-left: 50vw;
+    opacity: 0;
+    transition: all 0.9s;
+    transition-delay:0.7s;
+}
+section.s1 .swiper .swiper-slide h1 span {
+    color: #ff5427;
+    font-weight: bold;
+}
+
+section.s1 .swiper .swiper-slide p {
+    font-size: 3.6vw;
+    line-height: 6vw;
+    margin-top: 3.5vw;
+    font-weight: bold;
+    margin-left: 50vw;
+    opacity: 0;
+    transition: all 0.9s;
+    transition-delay: 0.9s;
+}
+section.s1 .swiper .swiper-slide h3 {
+    font-family: 'Cafe24SsurroundAir';
+    font-size: 3vw;
+    font-weight: bold;
+    margin-top: 2.4vw;
+    margin-left: 50vw;
+    opacity: 0;
+    transition: all 0.9s;
+    transition-delay: 0.8s;
+}
+section.s1 .swiper .swiper-slide p span {
+    color: #ff5427;
+    font-weight: bold;
+}
+section.s1 .swiper .swiper-slide a {
+    width: 21vw;
+    margin-top: 5vw;
+    background-color: #fff;
+    padding: 2vw 8vw 2vw 5vw;
+    border-radius: 30px;
+    color: #ff5427;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    font-size: 4vw;
+    margin-left: 50vw;
+    opacity: 0;
+    transition: all 0.9s;
+    transition-delay: 1s;
+    
+}
+section.s1 .swiper .swiper-slide a span {
+    width: 2vw;
+    display: block;
+    margin-left: 2.1vw;
+    margin-top: 1vw;
+
+}
+section.s1 .swiper .swiper-slide-active h1 {
+  margin-left: 0;
+  opacity: 1;
+}
+section.s1 .swiper .swiper-slide-active h3 {
+    margin-left: 0;
+    opacity: 1;
+  }
+section.s1 .swiper .swiper-slide-active p {
+    margin-left: 0;
+    opacity: 1;
+}
+section.s1 .swiper .swiper-slide-active a {
+    margin-left: 0;
+    opacity: 1;
+}
+section.s1 .swiper-horizontal>.swiper-pagination-bullets {
+    padding-right: 58vw;
+    padding-bottom: 8vw;
+}
+section.s1 .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0 2vw;
+    width: 12px;
+    height: 12px;
+}
+section.s1 .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet-active {
+    background-color: #fff;
+}
+
+/* section2(탭메뉴) */
+section.s2 h1 {
+    text-align: center;
+    margin-top: 14vw;
+    margin-bottom: 10vw;
+    font-size: 8vw;
+    font-weight: bold;
+    letter-spacing: -1px;
+}
+section.s2 .tab .tab_title ul {
+    display: flex;
+    flex-flow: row nowrap;
+}
+section.s2 .tab_title ul li {
+    width: 33.3333333%;
+    background-color: #ffc2ba;
+    text-align: center;
+    padding: 4vw;
+    box-sizing: border-box;
+}
+section.s2 .tab .tab_title ul li:nth-child(2){
+    border-left:1px solid #fff;
+    border-right: 1px solid #fff;
+}
+section.s2 .tab .tab_title ul li a {
+    display: flex;
+    flex-flow: column nowrap;    /*자식객체가 세로로 정렬*/
+}
+section.s2 .tab .tab_title ul li a .tab_icon {
+    width: 60%;
+    height: 5.19vh;
+    margin: 0 auto;
+    margin-bottom: 2vw;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: 0.5s;
+}
+section.s2 .tab .tab_title ul li a .i1 {
+    background-image: url(../img/section2icon1.png);
+}
+section.s2 .tab .tab_title ul li a .i2 {
+    background-image: url(../img/section2icon2.png);
+}
+section.s2 .tab .tab_title ul li a .i3 {
+    background-image: url(../img/section2icon3.png);
+}
+section.s2 .tab .tab_title ul li a p {
+    color: #fff1ca;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 4vw;
+}
+section.s2 .tab .tab_title ul li.active {
+    background-color: #ff5427;
+}
+section.s2 .tab .tab_title ul li.active a .tab_icon {
+    background-position: center bottom;
+}
+section.s2 .tab .tab_title ul li.active a p {
+    color: #fff;
+}
+section.s2 .tab .tab_con {
+    position: relative;
+    height: 235vh;
+}
+section.s2 .tab .tab_con > div {
+    position: absolute;
+}
+section.s2 .tab .tab_con .tab_bg {
+    width: 100%;
+    height: 63vw;
+    background-color: #ff5427;
+}
+section.s2 .tab .tab_con .txt_list_wrap .tab_list {
+    position: absolute;
+    padding:10vw 8vw;
+}
+section.s2 .tab .tab_con .txt_list_wrap .tab_list .tab_txt {
+    color: #fff;
+    font-family: 'Cafe24SsurroundAir';
+}
+section.s2 .tab .tab_con .txt_list_wrap .tab_list .tab_txt .tab_txt_title {
+    display: flex;
+    flex-flow: nowrap;
+    justify-content: space-between;
+}
+section.s2 .tab .tab_con .txt_list_wrap .tab_list .tab_txt .tab_txt_title a {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 3.4vw;
+    display: flex;
+    align-items: center;   /*자식객체들을 세로 가운데 정렬*/
+}
+section.s2 .tab .tab_con .txt_list_wrap .tab_list .tab_txt .tab_txt_title a span {
+    display: inline-block;   /*inline요소+block요소*/
+    width: 6vw;
+    margin-left: 2vw;
+}
+section.s2 .tab .tab_con .txt_list_wrap .tab_list .tab_txt .tab_txt_title h3 {
+    font-size: 5vw;
+}
+section.s2 .tab .tab_con .txt_list_wrap .tab_list .tab_txt p {
+    margin-top: 12vw;
+    font-size: 3.8vw;
+    line-height: 5.2vw;
+}
+section.s2 .tab .tab_con .txt_list_wrap .tab_list .tab_txt_wrap {
+    margin-top: 11vw;
+}
+section.s2 .tab .tab_con .txt_list_wrap .tab_list .tab_txt_wrap .tab_txt_list {
+    box-shadow: 7px 7px 22px rgba(0, 0,0,0.05);
+    margin-bottom: 20vw;
+}
+section.s2 .tab .tab_con .txt_list_wrap .tab_list .tab_txt_wrap .tab_txt_list .tab_txt_des {
+    padding: 6vw 5vw;
+    /* background-color: #fff;  */
+}
+section.s2 .tab .tab_con .txt_list_wrap .tab_list .tab_txt_wrap .tab_txt_list .tab_txt_des b {
+    color: #d8d8d8;
+    font-size: 3.2vw;
+    font-family: 'Cafe24SsurroundAir'; 
+}
+section.s2 .tab .tab_con .txt_list_wrap .tab_list .tab_txt_wrap .tab_txt_list .tab_txt_des b span {
+    color: #ff5427;
+    font-size: 2.9vw;
+    border-radius: 25px;
+    background-color: #fff;
+    border: 1px solid #ff5427;
+    padding: 1vw;
+    text-align: center;
+    margin-right: 5vw;
+}    
+section.s2 .tab .tab_con .txt_list_wrap .tab_list .tab_txt_wrap .tab_txt_list .tab_txt_des h2 {
+    font-size: 4vw;
+    margin-top: 3.3vw;
+    line-height: 4.8vw;
+    font-family: 'BinggraeMelona';
+    letter-spacing: 1px;
+}
+section.s2 .tab .tab_con .txt_list_wrap .tab_list .tab_txt_wrap .tab_txt_list .tab_txt_des p {
+    font-size: 3vw;
+    margin-top: 5.8vw;
+    font-family: 'Cafe24SsurroundAir'; 
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+section.s2 .tab .tab_con .txt_list_wrap .tab_list .tab_txt_wrap .tab_txt_list .tab_txt_des p span {
+    color: #d8d8d8;
+    font-size: 3vw;
+}
+/* section.s3 (슬라이드 swiper) */
+section.s3 h1 {
+    text-align: center;
+    margin-top: 14vw;
+    margin-bottom: 10vw;
+    font-size: 8vw;
+    font-weight: bold;
+}
+section.s3 .swiper-slide {
+    background-color: #fff;
+}
+section.s3 .swiper-slide .swiper_des {
+    padding: 12vw 10vw;
+    font-family: 'Cafe24SsurroundAir';
+}
+section.s3 .swiper-slide .swiper_des h1 {
+    text-align: left;
+    margin: 0;
+    color: #7572ff;
+    font-size: 6vw;
+    opacity: 0;
+    margin-top: 5vw;
+}
+section.s3 .swiper-slide .swiper_des h2 {
+    text-align: left;
+    padding-top:3vw;
+    font-size: 6vw;
+    opacity: 0;
+    margin-top: 5vw;
+}
+section.s3 .swiper-slide .swiper_des p {
+    text-align: left;
+    padding: 7vw 0;
+    color: #6b6a6a;
+    font-size: 3.6vw;
+    line-height: 6.2vw;
+    font-weight: bold;
+    letter-spacing: 1px;
+    opacity: 0;
+    margin-top: 5vw;
+}
+section.s3 .swiper-slide .swiper_des button {
+    border: 1px solid #333;
+    background-color: #fff;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+    padding:5vw;
+    width: 100%;
+    font-size: 3.4vw;
+    font-weight: bold; 
+    opacity: 0;
+    margin-top: 5vw;
+}
+section.s3 .swiper-slide .swiper_des button span {
+    display: block;
+    width: 5vw;
+}
+section.s3 .swiper-slide-active .swiper_des h1 {
+    opacity: 1;
+    margin-top: 0;
+    transition: all 0.5s;
+    transition-delay: 0.6s;
+}
+section.s3 .swiper-slide-active .swiper_des h2 {
+    opacity: 1;
+    margin-top: 0;
+    transition: all 0.5s;
+    transition-delay: 0.7s;
+}
+section.s3 .swiper-slide-active .swiper_des p {
+    opacity: 1;
+    margin-top: 0;
+    transition: 0.5s;
+    transition-delay: 0.8s;
+}
+section.s3 .swiper-slide-active .swiper_des button {
+    opacity: 1;
+    margin-top: 0;
+    transition: 0.5s;
+    transition-delay: 0.9s;
+}
+section.s3 .swiper .swiper-button-next {
+    right: 0;
+    top: 90vw;
+    padding: 8vw;
+    background-color: #fff;
+}
+section.s3 .swiper .swiper-button-next:after {
+    padding: 0 3.5vw;
+    padding-right: 10vw;
+    font-size: 5vw;
+    color: #333;
+    border-left: 1px solid #ccc;
+}
+section.s3 .swiper .swiper-button-prev {
+    left: auto;
+    right: 16vw;
+    top: 90vw;
+    padding: 8vw;
+    background-color: #fff;
+}
+section.s3 .swiper .swiper-button-prev:after {
+    padding: 0 14.8vw;
+    padding-right: 8vw;
+    font-size: 5vw;
+    color: #333;
+}
+section.s3 .swiper .swiper-button-next.swiper-button-disabled,
+section.s3 .swiper .swiper-button-prev.swiper-button-disabled {
+    opacity: 1;
+}
+section.s3 .swiper .swiper-button-next.swiper-button-disabled:after,
+section.s3 .swiper .swiper-button-prev.swiper-button-disabled:after {
+    color: #ccc;
+}
+/* setion.s4  */
+section.s4 {
+    background-image: url(../img/section4background.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    padding-bottom: 20vw;
+}
+section.s4 h1 {
+    text-align: center;
+    margin-top: 14vw;
+    margin-bottom: 4vw;
+    font-size: 9.5vw;
+    font-weight: bold;
+    color: #fff;
+}
+section.s4 p {
+    color: #fff;
+    font-family: 'BinggraeMelona';
+    font-size: 3.8vw;
+    text-align: center;
+}
+section.s4 .swiper {
+    margin-top: 10vw;
+    overflow: visible;  /*hidden(안보임)속성을 visible(보임)속성으로 변경 */
+}
+section.s4 .swiper .swiper-slide {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 90vw;
+   
+}
+section.s4 .swiper .best1 {
+    background-image: url(../img/section4-1.png);
+}
+section.s4 .swiper .best2 {
+    background-image: url(../img/section4-2.png);
+}
+section.s4 .swiper .best3 {
+    background-image: url(../img/section4-3.png);
+}
+section.s4 .swiper .best4 {
+    background-image: url(../img/section4-4.png);
+}
+section.s4 .swiper-horizontal>.swiper-pagination-bullets {
+    bottom:-70px ;
+} 
+section.s4 .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {
+    opacity: 1;
+    margin: 2vw 2vw;
+    width: 15px;
+    height: 15px;
+    background-color: #858584;
+}
+section.s4 .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet-active {
+    background-color: #fff;
+}
+
+/*section.s5*/
+section.s5 h1 {
+    text-align: center;
+    margin-top: 14vw;
+    margin-bottom: 10vw;
+    font-size: 8vw;
+    font-weight: bold;
+}
+section.s5 .news {
+    width: 90%;
+    margin: 0 auto;
+    float: none;
+}
+section.s5 .news .news_list {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    border-top: 1px solid #d8d8d8;
+    padding: 7vw 0;
+}
+section.s5 .news .news_list:last-child {
+    border-bottom: 1px solid #d8d8d8;
+}
+section.s5 .news .news_list div {
+    width: 35vw;
+    font-family: 'Cafe24SsurroundAir';
+}
+section.s5 .news .news_list .news_des {
+    margin-right: 12vw;
+}
+section.s5 .news .news_list div p {
+    font-size: 3vw;
+    color: #ff5427;
+    font-weight: bold;
+    margin-top: 1vw;
+}
+section.s5 .news .news_list div h2 {
+    margin: 4vw 0;
+    line-height: 5vw;
+    font-size: 3.6vw;
+    white-space: nowrap;
+}
+section.s5 .news .news_list div h3 {
+    font-size: 3vw;
+    color: #ccc;
+    font-weight: bold;
+}
+/* footer */
+footer {
+    background-color: #ff5e48;
+    margin-top: 15vw;
+}
+footer .inner {
+    width: 90%;
+    float: none;
+    margin: 0 auto;
+    padding: 10vw 0;
+}
+footer .inner .info ul {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+footer .inner .info ul li {
+    margin-right: 5vw;
+    
+}
+footer .inner .info ul li a {
+    color: #fff;
+    font-size: 3.2vw;
+    font-family: 'Cafe24SsurroundAir';
+    padding-bottom: 7vw;
+}
+footer .inner .family {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    padding-bottom: 6vw;
+    padding-top: 2vw;
+}
+footer .inner .family select {
+    background-color: #fff;
+    padding: 3vw;
+    width: 80%;
+    font-family: 'Cafe24SsurroundAir';
+    font-weight: bold;
+    border: none;
+    appearance: none;   /*select태그의 오른쪽 화살표 숨김*/
+    background-image: url(../img/sitemap-downarrow.png);
+    background-repeat: no-repeat;
+    background-position: right 20px center;
+}
+footer .inner .family a {
+    width: 7%;
+    padding: 4vw;
+    font-size: 3.2vw;
+    background-color: #fff;
+    font-family: 'Cafe24SsurroundAir';
+    font-weight: bold;
+    
+}
+footer .inner .addr {
+    padding: 8vw 0;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+footer .inner .addr .footer_logo {
+    width: 18%;
+}
+footer .inner .addr address {
+    font-size: 2.8vw;
+    line-height: 5vw;
+    color: #fff;
+    font-family: 'Cafe24SsurroundAir';
+    white-space: nowrap;
+    font-style: normal;
+}
+footer .inner .addr address p {
+    margin-top: 2vw;
+}
+.top {
+    width: 40px;
+    height: 40px;
+    background-color: #f6bbb3;
+    text-align: center;
+    font-size: 18px;
+    line-height: 42px;
+    bottom: 30px;
+    right: 30px;
+    position: fixed;
+    z-index: 50;
+    cursor: pointer;
+    color: #f1edec;
+    border-radius: 30px;
+    box-shadow: 1PX 1PX 3PX rgb(88, 87, 87);
+    transform: scale(0,0);
+    transition: all 0.5s;
+}
+.top.active {
+    transform: scale(1,1);
+}
